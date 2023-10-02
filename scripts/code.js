@@ -9,7 +9,7 @@ function colourButton(button) {
 
 	// check if selected row is fileld
 	if (selectedRow == 7) {
-		return alert("The row is full.");
+		return displayError();
 	}
 
 	// assigns button to the correct row
@@ -31,6 +31,7 @@ function colourButton(button) {
 	}
 }
 
+// check which spot is free
 function checkActive(button) {
 	// variables for column number and row number
 	let columnNum = button.id.charAt(1);
@@ -49,4 +50,13 @@ function checkActive(button) {
 		}
 	}
 	return lowestRow;
+}
+
+function displayError() {
+	const error = document.querySelector("#error");
+	error.innerHTML = "Error! That row is full!";
+	// Hide the error message after 3s
+	setTimeout(function () {
+		error.innerHTML = "";
+	}, 3000);
 }

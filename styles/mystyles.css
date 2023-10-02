@@ -5,6 +5,14 @@
 	text-align: center;
 }
 
+.game-details span {
+	display: block;
+	padding: 10px 0 100px 0;
+}
+.game-details span:nth-last-child(1) {
+	padding: 0;
+}
+
 /* Game board */
 #game-body {
 	background-color: blue;
@@ -36,4 +44,9 @@
 
 #player-turn {
 	text-shadow: 2px 2px 4px #ff0000;
+}
+
+#error {
+	font-size: 32px;
+	font-weight: 700;
 }
