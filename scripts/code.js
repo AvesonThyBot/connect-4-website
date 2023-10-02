@@ -5,7 +5,12 @@ let turn = 1;
 function colourButton(button) {
 	const playerTurn = document.querySelector("#player-turn");
 	selectedRow = checkActive(button);
-	console.log("lowest number is ", selectedRow);
+	console.log("lowest row number is ", selectedRow);
+
+	// check if selected row is fileld
+	if (selectedRow == 7) {
+		return alert("The row is full.");
+	}
 
 	// assigns button to the correct row
 	button = document.getElementById(`c${button.id.charAt(1)}r${selectedRow}`);
