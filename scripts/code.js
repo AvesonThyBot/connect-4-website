@@ -4,7 +4,7 @@ let turn = 1;
 
 function colourButton(button) {
 	selectedRow = checkActive(button);
-	console.log(selectedRow);
+	console.log("lowest number is ", selectedRow);
 	// Colour depending on turn, and swap turn
 	if (turn === 1) {
 		button.classList.add("red-buttons");
@@ -22,13 +22,19 @@ function checkActive(button) {
 
 	// checks button under
 	let lowestRow = 6;
-	for (let index = 1; index < rowNum; index++) {
+	for (let index = 6; index >= 1; index--) {
+		console.log(index);
 		let indexButton = document.getElementById(`c${columnNum}r${index}`);
-		if (rowNum > index && !indexButton.classList.contains("active")) {
+		// Find lowest free row
+		lowestRow = index;
+
+		if (index - 1 && indexButton.classList.contains("active")) {
 			// assigns lowest free row
-			if (lowestRow > index && !indexButton.classList.contains("active")) {
-				lowestRow = index;
+			lowestRow = index + 1;
+			if (lowestRow == 7) {
+				lowestRow = 6;
 			}
+			return lowestRow;
 		}
 	}
 	return lowestRow;
