@@ -23,3 +23,13 @@
 	border-radius: 50%;
 	border: 3px outset black;
 }
+
+.red-buttons {
+	background-color: red;
+	border: 3px inset red;
+}
+
+.yellow-buttons {
+	background-color: yellow;
+	border: 3px inset yellow;
+}
