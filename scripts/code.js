@@ -3,6 +3,7 @@ const buttons = document.querySelectorAll(".game-buttons");
 let turn = 1;
 
 function colourButton(button) {
+	const playerTurn = document.querySelector("#player-turn");
 	selectedRow = checkActive(button);
 	console.log("lowest number is ", selectedRow);
 
@@ -14,10 +15,12 @@ function colourButton(button) {
 		button.classList.add("red-buttons");
 		button.classList.add("active");
 		turn = 2;
+		playerTurn.innerHTML = "Yellow's Turn!";
 	} else {
 		button.classList.add("yellow-buttons");
 		button.classList.add("active");
 		turn = 1;
+		playerTurn.innerHTML = "Red's Turn!";
 	}
 }
 
