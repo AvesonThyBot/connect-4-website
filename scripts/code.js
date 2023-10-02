@@ -28,7 +28,7 @@ function checkActive(button) {
 		// Find lowest free row
 		lowestRow = index;
 
-		if (index - 1 && indexButton.classList.contains("active")) {
+		if ((index - 1 || index == 1) && indexButton.classList.contains("active")) {
 			// assigns lowest free row
 			lowestRow = index + 1;
 			if (lowestRow == 7) {
