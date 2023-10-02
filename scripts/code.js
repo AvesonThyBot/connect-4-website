@@ -16,11 +16,13 @@ function colourButton(button) {
 		button.classList.add("active");
 		turn = 2;
 		playerTurn.innerHTML = "Yellow's Turn!";
+		playerTurn.style.textShadow = "2px 2px 4px #FFD700";
 	} else {
 		button.classList.add("yellow-buttons");
 		button.classList.add("active");
 		turn = 1;
 		playerTurn.innerHTML = "Red's Turn!";
+		playerTurn.style.textShadow = "2px 2px 4px #ff0000";
 	}
 }
 
